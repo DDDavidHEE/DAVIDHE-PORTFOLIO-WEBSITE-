@@ -66,10 +66,10 @@
       <nav class="nav" aria-label="Primary navigation">
         <ul class="nav__list">
           <li><a href="#home" class="nav__link">Home</a></li>
-          <li><a href="#about" class="nav__link">About &amp; Hobbies</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+<li><a href="#hobbies" class="nav__link">Hobbies</a></li>
           <li><a href="#work" class="nav__link">Work</a></li>          <!-- gộp Portfolio -->
-          <li><a href="#blog" class="nav__link">Stories</a></li>       <!-- thay Insights -->
-          <li><a href="#events" class="nav__link">Events</a></li>      <!-- timeline hoạt động -->
+          <li><a href="#blog" class="nav__link">Blog</a></li>       <!-- thay Insights -->
           <li><a href="#contact" class="nav__link nav__cta">Contact</a></li>
         </ul>
       </nav>
@@ -166,7 +166,7 @@
 <section id="about" class="section about">
   <div class="container">
     <header class="section__head">
-      <span class="eyebrow">About Me</span>
+      
       <h2 class="h2">Crafting Digital Excellence</h2>
       <p class="lead">
         Over 3 years of full-stack experience, specializing in building large-scale, high-performance, and scalable web applications. Comfortable across the entire product lifecycle—from front-end interface design to back-end business logic and databases—across multiple technology stacks.
@@ -213,13 +213,75 @@
   </div>
 </section>
 
+
+
+<!-- =========================================
+     Hobbies Section (Masonry gallery + upload)
+     ========================================= -->
+     <section id="hobbies" class="section hobbies">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="h2">Hobbies </h2>
+          
+          
+        </header>
+    
+        <!-- Masonry grid -->
+        <div id="hobbyGrid" class="masonry">
+          <!-- 8 ảnh mẫu (bạn có thể thay đường dẫn sang static của Flask) -->
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-1.jpg') }}" alt="Quiet street at sunset" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-2.jpg') }}" alt="Minimal desk setup by the window" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-3.jpg') }}" alt="Morning coffee and sketchbook" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-4.jpg') }}" alt="Running in misty park" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-5.jpg') }}" alt="Reading corner at night" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-6.jpg') }}" alt="Cozy coffee shop" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-7.jpg') }}" alt="Mountains and lake view" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-8.jpg') }}" alt="Creative desk with drawings" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-9.jpg') }}" alt="Creative 9" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-10.jpg') }}" alt="Creative 9" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-11.jpg') }}" alt="Running in misty park" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-12.jpg') }}" alt="Running in misty park" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-13.jpg') }}" alt="Running in misty park" loading="lazy" />
+          </figure>
+          <figure class="masonry__item">
+            <img src="{{ url_for('static', filename='assets/hobby-14.jpg') }}" alt="Running in misty park" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    
 <!-- =========================================
      Skills Section
      ========================================= -->
 <section id="skills" class="section skills">
   <div class="container">
     <header class="section__head">
-      <span class="eyebrow">My Expertise</span>
+      
       <h2 class="h2">Technical Proficiency</h2>
       <p class="lead">
         A diverse skill set spanning Full-stack development, AI tools, and digital content creation.
@@ -305,10 +367,10 @@
      <section id="work" class="section portfolio">
       <div class="container">
         <header class="section__head">
-          <span class="eyebrow">Selected Projects</span>
-          <h2 class="h2">Portfolio</h2>
+          
+          <h2 class="h2">Work</h2>
           <p class="lead">
-            A snapshot of products I’ve designed and built—each with different stacks and goals.
+          
           </p>
         </header>
     
@@ -371,6 +433,40 @@
               -->
             </div>
           </article>
+
+
+
+          <!-- Project 3: typingtest -->
+<article class="work card">
+  <div class="work__media">
+    <img
+      src="{{ url_for('static', filename='assets/project-3.jpg') }}"
+      alt="typingtest — Minimal typing practice web app"
+      loading="lazy"
+    />
+  </div>
+  <div class="work__body">
+    <h3 class="h3">typingtest — Typing Practice App</h3>
+    <p class="muted">
+      A minimalist typing trainer inspired by Monkeytype. Practice with random text,
+      timed or word-count modes, and real-time metrics (WPM, accuracy, errors).
+      Built with a lightweight Python backend and modern front-end for speed and focus.
+    </p>
+    <ul class="tech">
+      <li>Python (Flask)</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+    <!-- Optional links
+    <div class="actions">
+      <a href="#" class="btn btn--sm btn--primary">Case Study</a>
+      <a href="#" class="btn btn--sm">GitHub</a>
+    </div>
+    -->
+  </div>
+</article>
+
     
           <!-- (Optional) Thêm project khác ở đây với tên & stack riêng -->
           <!--
@@ -379,7 +475,11 @@
         </div>
       </div>
     </section>
+
+
+
     
+      
    
     <!-- =========================================
          Blog Section
@@ -387,7 +487,7 @@
     <section id="blog" class="section blog">
       <div class="container">
         <header class="section__head">
-          <span class="eyebrow">Industry Insights</span>
+         
           <h2 class="h2">Latest Articles</h2>
           <p class="lead">
             Sharing knowledge on development trends and best practices.
@@ -460,7 +560,7 @@
     <section id="contact" class="section contact">
       <div class="container">
         <header class="section__head">
-          <span class="eyebrow">Let's Collaborate</span>
+         
           <h2 class="h2">Get in Touch</h2>
           <p class="lead">
             Discuss your project and how I can contribute to its success.
