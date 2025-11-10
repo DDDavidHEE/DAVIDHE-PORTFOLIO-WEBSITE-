@@ -5,6 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DavidHE • Professional Software Developer Portfolio</title>
   <meta name="description" content="DavidHE — Experienced freelance software developer crafting intuitive, user-centered digital solutions with a focus on clarity and impact." />
+  <meta name="keywords" content="DavidHE, Full-Stack Developer, Software Developer, Web Developer, Portfolio, Python, .NET, C#, JavaScript" />
+  <meta name="author" content="DavidHE" />
+  <link rel="canonical" href="{{ request.url }}" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ request.url }}" />
+  <meta property="og:title" content="DavidHE • Professional Software Developer Portfolio" />
+  <meta property="og:description" content="Experienced freelance software developer crafting intuitive, user-centered digital solutions." />
+  <meta property="og:image" content="{{ url_for('static', filename='assets/david-photo.jpg', _external=True) }}" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="{{ request.url }}" />
+  <meta property="twitter:title" content="DavidHE • Professional Software Developer Portfolio" />
+  <meta property="twitter:description" content="Experienced freelance software developer crafting intuitive, user-centered digital solutions." />
+  <meta property="twitter:image" content="{{ url_for('static', filename='assets/david-photo.jpg', _external=True) }}" />
+  
+  <!-- PWA -->
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+  <meta name="theme-color" content="#14b89c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="DavidHE Portfolio" />
   
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +39,46 @@
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "DavidHE",
+    "jobTitle": "Full-Stack Developer",
+    "description": "Experienced freelance software developer specializing in large-scale, high-performance web applications.",
+    "url": "{{ request.url_root }}",
+    "sameAs": [
+      "https://github.com/DDDavidHEE",
+      "https://www.linkedin.com/in/davidhoangem-davidhe-88694a318/",
+      "https://www.tiktok.com/@davidhevn/",
+      "https://www.facebook.com/hoang.snguyens.589583/"
+    ],
+    "email": "davidhoangem@gmail.com",
+    "knowsAbout": [
+      "Full-Stack Development",
+      "Python",
+      "JavaScript",
+      ".NET Core",
+      "C#",
+      "Web Development",
+      "AI Tools",
+      "Content Creation"
+    ]
+  }
+  </script>
+  
+  <!-- Google Analytics (replace with your GA ID) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
   
   <!-- Google Translate -->
   <script type="text/javascript">
@@ -47,6 +111,12 @@
       </a>
       
       <div class="header__controls">
+        <!-- Search -->
+        <div class="search" style="max-width: 200px; margin: 0;">
+          <input type="search" id="search-input" class="search__input" placeholder="Search..." aria-label="Search website" />
+          <button type="button" id="search-button" class="search__button" aria-label="Search">🔍</button>
+        </div>
+        
         <div class="theme-toggle">
           <span class="theme-toggle__icon" id="theme-icon">🌙</span>
           <button class="theme-toggle__button" id="theme-toggle" aria-label="Toggle dark mode">
@@ -67,9 +137,10 @@
         <ul class="nav__list">
           <li><a href="#home" class="nav__link">Home</a></li>
           <li><a href="#about" class="nav__link">About</a></li>
-<li><a href="#hobbies" class="nav__link">Hobbies</a></li>
-          <li><a href="#work" class="nav__link">Work</a></li>          <!-- gộp Portfolio -->
-          <li><a href="#blog" class="nav__link">Blog</a></li>       <!-- thay Insights -->
+          <li><a href="#hobbies" class="nav__link">Hobbies</a></li>
+          <li><a href="#work" class="nav__link">Work</a></li>
+          <li><a href="#blog" class="nav__link">Blog</a></li>
+          <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
           <li><a href="#contact" class="nav__link nav__cta">Contact</a></li>
         </ul>
       </nav>
@@ -131,8 +202,9 @@
           </ul>
           
           <div class="cta">
-            <a href="#portfolio" class="btn btn--primary">Explore My Work</a>
+            <a href="#work" class="btn btn--primary">Explore My Work</a>
             <a href="#contact" class="btn btn--secondary">Get in Touch</a>
+            <a href="/cv" class="btn btn--secondary cv-download" download="DavidHE_CV.pdf">Download CV</a>
           </div>
           
           <div class="stats">
@@ -141,7 +213,7 @@
               <span class="stat__label">Years Experience</span>
             </div>
             <div class="stat">
-              <span class="stat__num">10K+</span>
+              <span class="stat__num">10000</span>
               <span class="stat__label">Followers</span>
             </div>
             <div class="stat">
@@ -735,6 +807,145 @@
 
     
     <!-- =========================================
+         Testimonials Section
+         ========================================= -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="h2">What People Say</h2>
+          <p class="lead">
+            Testimonials from clients, colleagues, and collaborators.
+          </p>
+        </header>
+        
+        <div class="testimonials__carousel">
+          <!-- Testimonials loaded via API -->
+        </div>
+        
+        <div class="testimonials__controls">
+          <button class="testimonials__prev" aria-label="Previous testimonial">‹</button>
+          <button class="testimonials__next" aria-label="Next testimonial">›</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- =========================================
+         Timeline Section
+         ========================================= -->
+    <section id="timeline" class="section timeline">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="h2">Career Timeline</h2>
+          <p class="lead">
+            Key milestones in my professional journey.
+          </p>
+        </header>
+        
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__content card">
+              <div class="timeline__date">2021 - Present</div>
+              <h3 class="timeline__title">Full-Stack Developer</h3>
+              <p class="timeline__description">
+                Building large-scale web applications with Python, .NET Core, and modern JavaScript frameworks. 
+                Specializing in high-performance, scalable solutions.
+              </p>
+            </div>
+            <div class="timeline__marker"></div>
+          </article>
+          
+          <article class="timeline__item">
+            <div class="timeline__content card">
+              <div class="timeline__date">2020 - 2021</div>
+              <h3 class="timeline__title">Content Creator & Digital Media</h3>
+              <p class="timeline__description">
+                Started creating digital content, building a personal brand on TikTok and other platforms. 
+                Gained experience in video production, scriptwriting, and audience engagement.
+              </p>
+            </div>
+            <div class="timeline__marker"></div>
+          </article>
+          
+          <article class="timeline__item">
+            <div class="timeline__content card">
+              <div class="timeline__date">2019 - 2020</div>
+              <h3 class="timeline__title">Education & Learning</h3>
+              <p class="timeline__description">
+                Focused on learning full-stack development, mastering Python, JavaScript, and various web technologies. 
+                Built foundational projects and gained hands-on experience.
+              </p>
+            </div>
+            <div class="timeline__marker"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- =========================================
+         Certifications Section
+         ========================================= -->
+    <section id="certifications" class="section certifications">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="h2">Certifications & Achievements</h2>
+          <p class="lead">
+            Professional certifications and notable achievements.
+          </p>
+        </header>
+        
+        <div class="certifications__grid">
+          <article class="certification card">
+            <div class="certification__badge">🎓</div>
+            <h3 class="certification__name">Full-Stack Development</h3>
+            <p class="certification__issuer">Self-Taught & Professional Experience</p>
+            <p class="certification__date">2021 - Present</p>
+          </article>
+          
+          <article class="certification card">
+            <div class="certification__badge">📱</div>
+            <h3 class="certification__name">Content Creator</h3>
+            <p class="certification__issuer">TikTok, YouTube</p>
+            <p class="certification__date">10K+ Followers</p>
+          </article>
+          
+          <article class="certification card">
+            <div class="certification__badge">🎤</div>
+            <h3 class="certification__name">MC at TNTV</h3>
+            <p class="certification__issuer">Thai Nguyen Television</p>
+            <p class="certification__date">Media Production</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- =========================================
+         Newsletter Section
+         ========================================= -->
+    <section id="newsletter" class="section newsletter">
+      <div class="container">
+        <header class="section__head">
+          <h2 class="h2">Stay Updated</h2>
+          <p class="lead">
+            Subscribe to my newsletter for the latest updates, articles, and insights.
+          </p>
+        </header>
+        
+        <form id="newsletter-form" class="newsletter__form">
+          <input 
+            type="email" 
+            id="newsletter-email" 
+            class="newsletter__input" 
+            placeholder="Enter your email address" 
+            required 
+            aria-label="Email address" />
+          <button type="submit" class="btn btn--primary newsletter__button">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- =========================================
          Contact Section
          ========================================= -->
     <section id="contact" class="section contact">
@@ -747,23 +958,25 @@
           </p>
         </header>
         
-        <form class="card form" action="https://formspree.io/f/xdknyeqk" method="POST">
+        <form id="contact-form" class="card form" method="POST">
           <div class="form__row">
             <div class="field">
-              <label for="name">Your Name</label>
+              <label for="name">Your Name <span aria-label="required">*</span></label>
               <input id="name" 
                      name="name" 
                      type="text" 
                      placeholder="Enter your name" 
-                     required />
+                     required 
+                     aria-required="true" />
             </div>
             <div class="field">
-              <label for="email">Your Email</label>
+              <label for="email">Your Email <span aria-label="required">*</span></label>
               <input id="email" 
                      name="email" 
                      type="email" 
                      placeholder="your@email.com" 
-                     required />
+                     required 
+                     aria-required="true" />
             </div>
           </div>
           
@@ -776,12 +989,13 @@
           </div>
           
           <div class="field">
-            <label for="message">Your Message</label>
+            <label for="message">Your Message <span aria-label="required">*</span></label>
             <textarea id="message" 
                       name="message" 
                       rows="6" 
                       placeholder="Tell me about your project or inquiry..." 
-                      required></textarea>
+                      required 
+                      aria-required="true"></textarea>
           </div>
           
           <button type="submit" class="btn btn--primary">
@@ -790,7 +1004,7 @@
           
           <p class="form__note body-sm muted">
             Alternatively, email me directly at 
-            <a href="mailto:hello@davidhe.dev" class="accent">davidhoangem@gmai.com</a>
+            <a href="mailto:davidhoangem@gmail.com" class="accent">davidhoangem@gmail.com</a>
           </p>
         </form>
       </div>
@@ -854,6 +1068,7 @@
   <!-- =========================================
        Scripts
        ========================================= -->
+  <script src="{{ url_for('static', filename='js/enhanced.js') }}" defer></script>
   <script>
     // Dark Mode Toggle
     (function() {
@@ -1206,6 +1421,19 @@
         }
       });
     })();
+    
+    // Service Worker Registration (PWA)
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/static/sw.js')
+          .then(registration => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch(error => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
   </script>
 </body>
 </html>

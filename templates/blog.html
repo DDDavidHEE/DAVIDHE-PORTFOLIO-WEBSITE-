@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | DavidHE Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container header__bar">
+      <a class="brand" href="/" aria-label="Go to home">
+        <span class="brand__text">DavidHE</span>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/blog" class="nav__link">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <section class="section blog">
+      <div class="container">
+        <header class="section__head">
+          <h1 class="h1">Blog</h1>
+          <p class="lead">Latest articles and insights</p>
+        </header>
+        
+        <!-- Search -->
+        <div class="search">
+          <form method="GET" action="/blog">
+            <input type="search" name="search" class="search__input" placeholder="Search articles..." value="{{ search }}" />
+            <button type="submit" class="search__button">🔍</button>
+          </form>
+        </div>
+        
+        <!-- Categories -->
+        {% if categories %}
+        <div class="tags" style="justify-content: center; margin-bottom: 2rem;">
+          <a href="/blog" class="tag {% if not current_category %}tag--active{% endif %}">All</a>
+          {% for category in categories %}
+          <a href="/blog?category={{ category }}" class="tag {% if current_category == category %}tag--active{% endif %}">{{ category }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        <!-- Blog Posts -->
+        <div class="grid grid--3">
+          {% for post in posts.items %}
+          <article class="blog__card card">
+            <img src="{{ post.image_url or url_for('static', filename='assets/blog-1.jpg') }}" 
+                 alt="{{ post.title }}" 
+                 loading="lazy" />
+            <div class="blog__body">
+              {% if post.category %}
+              <span class="tag">{{ post.category }}</span>
+              {% endif %}
+              <h3 class="h3">{{ post.title }}</h3>
+              <p class="excerpt">{{ post.excerpt or post.content[:150] + '...' }}</p>
+              <a class="read" href="/blog/{{ post.slug }}">
+                Read Article
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+        
+        <!-- Pagination -->
+        {% if posts.pages > 1 %}
+        <div class="pagination">
+          {% if posts.has_prev %}
+          <a href="/blog?page={{ posts.prev_num }}{% if search %}&search={{ search }}{% endif %}{% if current_category %}&category={{ current_category }}{% endif %}" class="btn btn--secondary">Previous</a>
+          {% endif %}
+          <span>Page {{ posts.page }} of {{ posts.pages }}</span>
+          {% if posts.has_next %}
+          <a href="/blog?page={{ posts.next_num }}{% if search %}&search={{ search }}{% endif %}{% if current_category %}&category={{ current_category }}{% endif %}" class="btn btn--secondary">Next</a>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p class="muted body-sm footer__copyright">
+        © {{ current_year }} DavidHE. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
+
