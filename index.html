@@ -7,24 +7,24 @@
   <meta name="description" content="DavidHE — Experienced freelance software developer crafting intuitive, user-centered digital solutions with a focus on clarity and impact." />
   <meta name="keywords" content="DavidHE, Full-Stack Developer, Software Developer, Web Developer, Portfolio, Python, .NET, C#, JavaScript" />
   <meta name="author" content="DavidHE" />
-  <link rel="canonical" href="{{ request.url }}" />
+  <link rel="canonical" href="https://davidhevn.github.io/" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ request.url }}" />
+  <meta property="og:url" content="https://davidhevn.github.io/" />
   <meta property="og:title" content="DavidHE • Professional Software Developer Portfolio" />
   <meta property="og:description" content="Experienced freelance software developer crafting intuitive, user-centered digital solutions." />
-  <meta property="og:image" content="{{ url_for('static', filename='assets/david-photo.jpg', _external=True) }}" />
+  <meta property="og:image" content="static/assets/david-photo.jpg" />
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="{{ request.url }}" />
+  <meta property="twitter:url" content="https://davidhevn.github.io/" />
   <meta property="twitter:title" content="DavidHE • Professional Software Developer Portfolio" />
   <meta property="twitter:description" content="Experienced freelance software developer crafting intuitive, user-centered digital solutions." />
-  <meta property="twitter:image" content="{{ url_for('static', filename='assets/david-photo.jpg', _external=True) }}" />
+  <meta property="twitter:image" content="static/assets/david-photo.jpg" />
   
   <!-- PWA -->
-  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+  <link rel="manifest" href="static/manifest.json" />
   <meta name="theme-color" content="#14b89c" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="stylesheet" href="static/css/style.css" />
   
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -48,9 +48,9 @@
     "name": "DavidHE",
     "jobTitle": "Full-Stack Developer",
     "description": "Experienced freelance software developer specializing in large-scale, high-performance web applications.",
-    "url": "{{ request.url_root }}",
+    "url": "https://davidhevn.github.io/",
     "sameAs": [
-      "https://github.com/DDDavidHEE",
+      "https://github.com/davidhevn",
       "https://www.linkedin.com/in/davidhoangem-davidhe-88694a318/",
       "https://www.tiktok.com/@davidhevn/",
       "https://www.facebook.com/hoang.snguyens.589583/"
@@ -207,7 +207,7 @@
           <div class="cta">
             <a href="#work" class="btn btn--primary">Explore My Work</a>
             <a href="#contact" class="btn btn--secondary">Get in Touch</a>
-            <a href="/cv" class="btn btn--secondary cv-download" download="DavidHE_CV.pdf">Download CV</a>
+            <a href="static/cv.pdf" class="btn btn--secondary cv-download" download="DavidHE_CV.pdf">Download CV</a>
           </div>
           
           <div class="stats">
@@ -228,7 +228,7 @@
         
         <div class="hero__figure">
           <img class="hero__3d" 
-               src="{{ url_for('static', filename='assets/hero-3d.png') }}" 
+               src="static/assets/hero-3d.png" 
                alt="Abstract 3D illustration representing innovation" />
         </div>
       </div>
@@ -253,7 +253,7 @@
         <div class="profile__media">
           <img
             class="profile__photo"
-            src="{{ url_for('static', filename='assets/david-photo.jpg') }}"
+            src="static/assets/david-photo.jpg"
             alt="DavidHE professional portrait"
             loading="lazy"
           />
@@ -281,7 +281,7 @@
           <li>Continuous learning & adaptation</li>
         </ul>
         <p class="quote">
-          “I believe in creating software that solves real problems while elevating user satisfaction.”
+          "I believe in creating software that solves real problems while elevating user satisfaction."
         </p>
       </article>
     </div>
@@ -305,46 +305,46 @@
         <div id="hobbyGrid" class="masonry">
           <!-- 8 ảnh mẫu (bạn có thể thay đường dẫn sang static của Flask) -->
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-1.jpg') }}" alt="Quiet street at sunset" loading="lazy" />
+            <img src="static/assets/hobby-1.jpg" alt="Quiet street at sunset" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-2.jpg') }}" alt="Minimal desk setup by the window" loading="lazy" />
+            <img src="static/assets/hobby-2.jpg" alt="Minimal desk setup by the window" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-3.jpg') }}" alt="Morning coffee and sketchbook" loading="lazy" />
+            <img src="static/assets/hobby-3.jpg" alt="Morning coffee and sketchbook" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-4.jpg') }}" alt="Running in misty park" loading="lazy" />
+            <img src="static/assets/hobby-4.jpg" alt="Running in misty park" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-5.jpg') }}" alt="Reading corner at night" loading="lazy" />
+            <img src="static/assets/hobby-5.jpg" alt="Reading corner at night" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-6.jpg') }}" alt="Cozy coffee shop" loading="lazy" />
+            <img src="static/assets/hobby-6.jpg" alt="Cozy coffee shop" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-7.jpg') }}" alt="Mountains and lake view" loading="lazy" />
+            <img src="static/assets/hobby-7.jpg" alt="Mountains and lake view" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-8.jpg') }}" alt="Creative desk with drawings" loading="lazy" />
+            <img src="static/assets/hobby-8.jpg" alt="Creative desk with drawings" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-9.jpg') }}" alt="Creative 9" loading="lazy" />
+            <img src="static/assets/hobby-9.jpg" alt="Creative 9" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-10.jpg') }}" alt="Creative 9" loading="lazy" />
+            <img src="static/assets/hobby-10.jpg" alt="Creative 9" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-11.jpg') }}" alt="Running in misty park" loading="lazy" />
+            <img src="static/assets/hobby-11.jpg" alt="Running in misty park" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-12.jpg') }}" alt="Running in misty park" loading="lazy" />
+            <img src="static/assets/hobby-12.jpg" alt="Running in misty park" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-13.jpg') }}" alt="Running in misty park" loading="lazy" />
+            <img src="static/assets/hobby-13.jpg" alt="Running in misty park" loading="lazy" />
           </figure>
           <figure class="masonry__item">
-            <img src="{{ url_for('static', filename='assets/hobby-14.jpg') }}" alt="Running in misty park" loading="lazy" />
+            <img src="static/assets/hobby-14.jpg" alt="Running in misty park" loading="lazy" />
           </figure>
         </div>
       </div>
@@ -452,7 +452,7 @@
           <article class="work card">
             <div class="work__media">
               <img
-                src="{{ url_for('static', filename='assets/project-1.jpg') }}"
+                src="static/assets/project-1.jpg"
                 alt="HE Coffee — cafe management web app"
                 loading="lazy"
               />
@@ -482,7 +482,7 @@
           <article class="work card">
             <div class="work__media">
               <img
-                src="{{ url_for('static', filename='assets/project-2.jpg') }}"
+                src="static/assets/project-2.jpg"
                 alt="LearnLangs — AI-powered language learning app"
                 loading="lazy"
               />
@@ -501,7 +501,7 @@
               <!-- Optional links
               <div class="actions">
                 <a href="#" class="btn btn--sm btn--primary">Case Study</a>
-                <a href="https://github.com/DDDavidHEE/LearnLangs" class="btn btn--sm">GitHub</a>
+                <a href="https://github.com/davidhevn/LearnLangs" class="btn btn--sm">GitHub</a>
               </div>
               -->
             </div>
@@ -513,7 +513,7 @@
 <article class="work card">
   <div class="work__media">
     <img
-      src="{{ url_for('static', filename='assets/project-3.jpg') }}"
+      src="static/assets/project-3.jpg"
       alt="typingtest — Minimal typing practice web app"
       loading="lazy"
     />
@@ -569,7 +569,7 @@
           <button class="blog__nav blog__nav--prev" aria-label="Previous articles">‹</button>
           <div class="blog__track">
           <article class="blog__card card">
-            <img src="{{ url_for('static', filename='assets/blog-1.jpg') }}" 
+            <img src="static/assets/blog-1.jpg" 
                  alt="Specialized seminar on advanced technology applications in biomedical science and AI" 
                  loading="lazy" />
             <div class="blog__body">
@@ -586,7 +586,7 @@
           </article>
           
           <article class="blog__card card">
-            <img src="{{ url_for('static', filename='assets/blog-2.1jpg') }}" 
+            <img src="static/assets/blog-2.1.jpg" 
                  alt="From Student to Discussion Partner: Immersing in AI with Dr. Lin at ICTU" 
                  loading="lazy" />
             <div class="blog__body">
@@ -603,7 +603,7 @@
           </article>
           
           <article class="blog__card card">
-            <img src="{{ url_for('static', filename='assets/blog-3.jpg') }}" 
+            <img src="static/assets/blog-3.jpg" 
                  alt="Blog post about content creation" 
                  loading="lazy" />
             <div class="blog__body">
@@ -621,7 +621,7 @@
           
           <!-- New: English Club President memories -->
           <article class="blog__card card">
-            <img src="{{ url_for('static', filename='assets/blog-1312.jpg') }}" 
+            <img src="static/assets/blog-1312.jpg" 
                  alt="My Journey as English Club President" 
                  loading="lazy" />
             <div class="blog__body">
@@ -669,7 +669,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-seminar-1.jpg') }}" 
+                <img src="static/assets/blog-seminar-1.jpg" 
                      alt="Specialized seminar at ICTU - Overview" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">The specialized seminar at ICTU with enthusiastic participation from faculty and students</figcaption>
@@ -688,7 +688,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-seminar-2.jpg') }}" 
+                <img src="static/assets/blog-seminar-2.jpg" 
                      alt="Dr. Shirley Chen presenting on 3D Ultrasound" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">Dr. Shirley Chen presenting on advanced 3D Ultrasound technology</figcaption>
@@ -705,7 +705,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-seminar-3.jpg') }}" 
+                <img src="static/assets/blog-seminar-3.jpg" 
                      alt="Assoc. Prof. Dr. Kevin Hung presenting on Quantum Machine Learning" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">Assoc. Prof. Dr. Kevin Hung introducing Quantum Machine Learning</figcaption>
@@ -716,7 +716,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-seminar-4.jpg') }}" 
+                <img src="static/assets/blog-seminar-4.jpg" 
                      alt="Discussion and exchange scene at the seminar" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">Enjoying and learning directly from leading experts.</figcaption>
@@ -732,7 +732,7 @@
                 The event successfully facilitated international academic connections, creating an environment for Vietnamese researchers, faculty, and students to directly access world-leading technological trends in Information Technology and Biomedical Science. This provides a solid foundation for developing high-quality human resources capable of integration and contributing to the nation's scientific and technological development.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/image_8cbd2178.jpg') }}" 
+                <img src="static/assets/image_8cbd2178.jpg" 
                      alt="Group photo of faculty, Dr. Lin, and students" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">The group photo captures the wonderful learning spirit and the tight academic cooperation between ICTU and HKMU.</figcaption>
@@ -774,7 +774,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-4.1.jpg') }}" alt="First official meeting as English Club President" loading="lazy" />
+                <img src="static/assets/blog-4.1.jpg" alt="First official meeting as English Club President" loading="lazy" />
                 <figcaption class="body-sm muted">The Beginning Moment – Full of Passion and Expectation.</figcaption>
               </figure>
               
@@ -789,7 +789,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-242.jpg') }}" alt="Team bonding activities and club meetings" loading="lazy" />
+                <img src="static/assets/blog-242.jpg" alt="Team bonding activities and club meetings" loading="lazy" />
                 <figcaption class="body-sm muted">Early club meetings with fun games and team bonding activities.</figcaption>
               </figure>
               
@@ -805,15 +805,15 @@
                 We won the consolation prize, receiving 1,500,000 VND. But more than the prize money, the pride of representing ICTU on the red carpet was an unforgettable experience. Standing there with my team, I felt immense pride in what we had accomplished together.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-443.1.jpg') }}" alt="First official meeting as English Club President" loading="lazy" />
+                <img src="static/assets/blog-443.1.jpg" alt="First official meeting as English Club President" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-4423.1.jpg') }}" alt="First official meeting as English Club President" loading="lazy" />
+                <img src="static/assets/blog-4423.1.jpg" alt="First official meeting as English Club President" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-44623.1.jpg') }}" alt="First official meeting as English Club President" loading="lazy" />
+                <img src="static/assets/blog-44623.1.jpg" alt="First official meeting as English Club President" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <h3 class="h3">B. Awards & Recognition Ceremony (2023-2024)</h3>
@@ -822,7 +822,7 @@
                 The Awards & Recognition Ceremony for the 2023-2024 academic year was a moment of celebration for our entire team. Receiving awards for club excellence was a testament to the hard work and dedication of every member. Standing with the entire team as we were honored was a moment that reinforced the importance of collective effort.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-4573.1.jpg') }}" alt="First official meeting as English Club President" loading="lazy" />
+                <img src="static/assets/blog-4573.1.jpg" alt="First official meeting as English Club President" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <h3 class="h3">C. Olympic Tiếng Anh ICTU 2024</h3>
@@ -831,7 +831,7 @@
                 Organizing the Olympic Tiếng Anh ICTU 2024 was one of the largest responsibilities I undertook as President. This major English competition required months of planning, coordination, and teamwork. Seeing so many students participate and excel in the competition was incredibly rewarding. The event not only showcased the English skills of ICTU students but also strengthened the English learning community at our university.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-457883.1.jpg') }}" alt="First official meeting as English Club President" loading="lazy" />
+                <img src="static/assets/blog-457883.1.jpg" alt="First official meeting as English Club President" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <h3 class="h3">D. STAR Awards 2024</h3>
@@ -844,7 +844,7 @@
                 Presenting alongside talented teammates was an experience that taught me the value of collaboration and mutual support. Each team member contributed their unique strengths, creating a presentation that was both informative and engaging.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-45.883.1.jpg') }}" alt="First official meeting as English Club President" loading="lazy" />
+                <img src="static/assets/blog-45.883.1.jpg" alt="First official meeting as English Club President" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <h3 class="h3">E. T.E.C Spell-Off Competition</h3>
@@ -854,7 +854,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-3.42.4.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-3.42.4.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted">Major events and competitions – where we connected and shined.</figcaption>
               </figure>
               
@@ -870,15 +870,15 @@
                 The event was a beautiful representation of how language and culture can bring people together. Seeing students from different countries and backgrounds connect through English and shared activities was truly inspiring. It reinforced my belief in the power of cultural exchange and inclusive leadership.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-3.4232.4.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-3.4232.4.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-3.424432.4.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-3.424432.4.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-3.42443772.4.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-3.42443772.4.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <h3 class="h3">B. Vietnamese Teachers' Day Celebration</h3>
@@ -891,11 +891,11 @@
                 The gift-giving and appreciation activities created a warm atmosphere that strengthened the bond between students and teachers. It was a reminder that leadership is not just about organizing events, but also about fostering meaningful relationships and showing appreciation to those who support us.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-6.42.4.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-6.42.4.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-6.425.4.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-6.425.4.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <h2 class="h2">5. Growth & Lessons Learned</h2>
@@ -916,11 +916,11 @@
                 Handling pressure and responsibility was another crucial skill I developed. There were moments of stress and uncertainty, but these challenges taught me resilience and problem-solving. I learned that leadership is not about having all the answers, but about finding solutions together with your team.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-6.4.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-6.4.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-6.41.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-6.41.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
               <h2 class="h2">6. Conclusion - Memories That Last</h2>
@@ -937,7 +937,7 @@
                 To all the members, advisors, and supporters who were part of this journey – thank you. These memories are not just mine; they belong to all of us who shared in this incredible experience. The English Club will always hold a special place in my heart, and I am proud to have been part of its story.
               </p>
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/blog-6.413.jpg') }}" alt="Major competitions and achievements" loading="lazy" />
+                <img src="static/assets/blog-6.413.jpg" alt="Major competitions and achievements" loading="lazy" />
                 <figcaption class="body-sm muted"></figcaption>
               </figure>
             </div>
@@ -972,7 +972,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/image_8c6b84.jpg') }}" 
+                <img src="static/assets/image_8c6b84.jpg" 
                      alt="Dr. Feng Cheng Lin passionately shares strategies for optimizing AI models" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">Dr. Feng Cheng Lin passionately shares strategies for optimizing AI models, opening new directions for smart devices.</figcaption>
@@ -989,7 +989,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/image_8c6ba1.jpg') }}" 
+                <img src="static/assets/image_8c6ba1.jpg" 
                      alt="Student actively engaging in Q&A session" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">I myself am actively engaging in the Q&A, representing the deep interest of ICTU students in the practical application of AI. That was the moment we transitioned from learners to discussion partners.</figcaption>
@@ -1002,7 +1002,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/image_8cbd26.jpg') }}" 
+                <img src="static/assets/image_8cbd26.jpg" 
                      alt="Photo with Dr. Lin" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">Enjoying and learning directly from leading experts.</figcaption>
@@ -1017,7 +1017,7 @@
               </p>
               
               <figure class="blog-article__image">
-                <img src="{{ url_for('static', filename='assets/image_8cbd21.jpg') }}" 
+                <img src="static/assets/image_8cbd21.jpg" 
                      alt="Group photo of faculty, Dr. Lin, and students" 
                      loading="lazy" />
                 <figcaption class="body-sm muted">The group photo captures the wonderful learning spirit and the tight academic cooperation between ICTU and FCU.</figcaption>
@@ -1187,7 +1187,7 @@
           </p>
         </header>
         
-        <form id="contact-form" class="card form" method="POST" action="/contact" novalidate>
+        <form id="contact-form" class="card form" method="POST" action="https://formsubmit.co/davidhoangem@gmail.com" novalidate>
           <div class="form__row">
             <div class="field">
               <label for="name">Your Name <span aria-label="required">*</span></label>
@@ -1257,7 +1257,7 @@
         
         <ul class="social">
           <li>
-            <a href="https://github.com/DDDavidHEE" 
+            <a href="https://github.com/davidhevn" 
                aria-label="Visit GitHub profile"
                target="_blank" 
                rel="noopener noreferrer">
@@ -1275,10 +1275,7 @@
           <li>
             <a href="https://www.tiktok.com/@davidhevn/"
                aria-label="Visit TikTok profile" target="_blank" rel="noopener noreferrer" class="social__tiktok">
-
-              </span>
               TikTok
-              
             </a>
           </li>
           <li>
@@ -1297,7 +1294,7 @@
   <!-- =========================================
        Scripts
        ========================================= -->
-  <script src="{{ url_for('static', filename='js/enhanced.js') }}" defer></script>
+  <script src="static/js/enhanced.js" defer></script>
   <script>
     // Dark Mode Toggle
     (function() {
